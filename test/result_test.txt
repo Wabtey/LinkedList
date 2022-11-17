@@ -1,0 +1,423 @@
+
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+index of the searched element ? Error : impossible to find the element 1
+The list contains 0 element(s)
+
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 1 element(s)
+[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 2 element(s)
+[4]->[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 3 element(s)
+[6]->[4]->[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 4 element(s)
+[11]->[6]->[4]->[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 5 element(s)
+[11]->[6]->[4]->[2]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ?  searched element is 4
+The list contains 5 element(s)
+[11]->[6]->[4]->[2]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ?  searched element is 11
+The list contains 5 element(s)
+[11]->[6]->[4]->[2]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ? Error : impossible to find the element 5
+The list contains 5 element(s)
+[11]->[6]->[4]->[2]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+The list contains 0 element(s)
+list erased
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+Value of the new element ? The list contains 1 element(s)
+[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 2 element(s)
+[2]->[4]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 3 element(s)
+[2]->[4]->[6]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 4 element(s)
+[2]->[4]->[6]->[8]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the element to remove ? The list contains 3 element(s)
+[2]->[4]->[6]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 4 element(s)
+[2]->[4]->[6]->[11]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 6 element(s)
+[2]->[4]->[6]->[11]->[7]->[8]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 7 element(s)
+[2]->[4]->[6]->[11]->[7]->[8]->[24]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the element to remove ? The list contains 6 element(s)
+[2]->[4]->[6]->[11]->[7]->[24]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the element to remove ? The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+The list contains 0 element(s)
+list erased
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+Value of the new element ? The list contains 1 element(s)
+[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 2 element(s)
+[2]->[4]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 3 element(s)
+[2]->[4]->[6]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 4 element(s)
+[2]->[4]->[6]->[8]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+The list contains 4 element(s)
+[8]->[6]->[4]->[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+The list contains 0 element(s)
+list erased
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+index of the searched element ? Error : impossible to find a element containing 1
+The list contains 0 element(s)
+
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 1 element(s)
+[2]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 2 element(s)
+[2]->[4]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 3 element(s)
+[2]->[4]->[6]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 4 element(s)
+[2]->[4]->[6]->[11]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+Value of the new element ? The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ?  index of  2 is 0
+The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ? Error : impossible to find a element containing 0
+The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+index of the searched element ?  index of  7 is 4
+The list contains 5 element(s)
+[2]->[4]->[6]->[11]->[7]
+ Program of chained list 
+  'h/t' : Insert an element to the head/tail of the list
+  'f'   : search of a list element
+  'v'   : find the index of an element
+  's'   : suppression of a list element
+  'r'   : reverse the order of the list elements
+  'x'   : exit the program
+ What is your choice ?
+
+The list contains 0 element(s)
+list erased
