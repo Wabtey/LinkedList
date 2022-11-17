@@ -316,57 +316,6 @@ int remove_element(list_elem_t **ppl, int value)
 
 /*
  * SYNOPSYS :
- *   int remove_element(list_elem_t * * ppl, int value)
- * DESCRIPTION :
- *   Removes from the list the first element with a value equal to the argument value and
- *   frees the memory space reserved by this element.
- *   Attention : Depending on the position, the head of the list may need to be modified
- * PARAMETERS :
- *   list_elem_t ** ppl : pointer to the pointer of the head of the list
- *   int value  : value to be removed from the list
- * RESULT :
- *    0 in case of success
- *   -1 in case of error
- */
-int remove_element(list_elem_t **ppl, int value)
-{
-  head_parent_target headParentTarget = find_first_element_with_value(*ppl, value);
-
-  list_elem_t *head = headParentTarget.head;
-  list_elem_t *parent = &headParentTarget.parent;
-  list_elem_t *target = &headParentTarget.target;
-
-  if (
-      head != NULL &&
-      parent != NULL &&
-      target != NULL)
-  {
-    parent->next = target->next;
-    ppl = &head;
-    free(target);
-    return 0;
-  }
-  else
-  {
-    return -1;
-  }
-  //  switch( headParentTarget ) {
-  //       case (NULL, NULL, NULL):
-  //       case (head, NULL, NULL):
-  //       case (head, parent, NULL): return -1; // break;
-  //       case (head, parent, target):
-  //            // redundant if
-  //            if (target != NULL) {
-  //                 parent->next =  target->next;
-  //                 ppl = *head;
-  //                 free(target);
-  //            }
-  //            return 0;
-  //            // break;
-  //  }
-}
-/*
- * SYNOPSYS :
  *   int remove_element_2(list_elem_t * * ppl, int value)
  * DESCRIPTION :
  *   Removes from the list the first element with a value equal to the argument value and
@@ -413,6 +362,58 @@ int remove_element_2(list_elem_t **ppl, int value)
     free(removing);
   }
   return 0;
+}
+
+/*
+ * SYNOPSYS :
+ *   int remove_element(list_elem_t * * ppl, int value)
+ * DESCRIPTION :
+ *   Removes from the list the first element with a value equal to the argument value and
+ *   frees the memory space reserved by this element.
+ *   Attention : Depending on the position, the head of the list may need to be modified
+ * PARAMETERS :
+ *   list_elem_t ** ppl : pointer to the pointer of the head of the list
+ *   int value  : value to be removed from the list
+ * RESULT :
+ *    0 in case of success
+ *   -1 in case of error
+ */
+int remove_element_3(list_elem_t **ppl, int value)
+{
+  head_parent_target headParentTarget = find_first_element_with_value(*ppl, value);
+
+  list_elem_t *head = headParentTarget.head;
+  list_elem_t *parent = &headParentTarget.parent;
+  list_elem_t *target = &headParentTarget.target;
+
+  if (
+      head != NULL &&
+      parent != NULL &&
+      target != NULL)
+  {
+    parent->next = target->next;
+    ppl = &head;
+    free(target);
+    return 0;
+  }
+  else
+  {
+    return -1;
+  }
+  //  switch( headParentTarget ) {
+  //       case (NULL, NULL, NULL):
+  //       case (head, NULL, NULL):
+  //       case (head, parent, NULL): return -1; // break;
+  //       case (head, parent, target):
+  //            // redundant if
+  //            if (target != NULL) {
+  //                 parent->next =  target->next;
+  //                 ppl = *head;
+  //                 free(target);
+  //            }
+  //            return 0;
+  //            // break;
+  //  }
 }
 
 /*
