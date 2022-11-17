@@ -393,6 +393,7 @@ int remove_element_3(list_elem_t **ppl, int value)
   {
     parent->next = target->next;
     ppl = &head;
+    // this free doesn't really free the target
     free(target);
     return 0;
   }
