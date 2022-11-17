@@ -24,8 +24,7 @@ obj/list.o: src/list.c include/list.h
 
 obj/test_list.o: src/test_list.c include/list.h
 
-	gcc $(CFLAGS) -c src/test_list.c -I./include -o obj/test_list.o 
-# 
+	gcc $(CFLAGS) -c src/test_list.c -I./include -o obj/test_list.o
 
 #
 # Listing creation in pdf
@@ -44,12 +43,16 @@ clean :
 	rm obj/*.o test_list  
 
 
-
-
-
 #
 # Test the functionality 
 #
 
-test :
-# To be completed
+test : 
+	./test_list < test/test_find.txt > test/result_test.txt
+	./test_list < test/test_remove.txt >> test/result_test.txt
+	./test_list < test/test_reverse.txt >> test/result_test.txt
+	./test_list < test/test_find_index.txt >> test/result_test.txt
+	
+	
+
+
