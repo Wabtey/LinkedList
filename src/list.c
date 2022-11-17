@@ -116,21 +116,53 @@ insert_tail(list_elem_t * * l, int value) {
  *   int index : position of the element to be found
  *   list_elem_t * l : pointer of the head of the list
  * RESULTAT :
- *   - a pointer to the element of the list in cas of success
+ *   - a pointer to the element of the list in case of success
  *   - NULL in case of error
  */
-list_elem_t *
-find_element(list_elem_t * l, int index) {
+list_elem_t * find_element(list_elem_t * l, int index) {
 
   list_elem_t * current = l;
 
   for (int i = 0 ; i < index ; i++)
   {
+    // si l'element est null on est deja à la fin de la liste et on a pas trouvé l'element
     if ( current==NULL ) { return NULL; } 
     current = current -> next;
   }
 
   return current;
+}
+
+/*
+ * SYNOPSYS :
+ *   list_elem_t * find_index(list_elem_t * l, int index)
+ * DESCRIPTION :
+ *   Return a pointer of the first element containing the value
+ * PARAMETERS :
+ *   int value : value of the element to be found
+ *   list_elem_t * l : pointer of the head of the list
+ * RESULTAT :
+ *   - an index to the element
+ *   - NULL in case of error
+ */
+int
+find_index_element(list_elem_t * l, int value) {
+
+  list_elem_t * current = l;
+
+  if ( current==NULL ) { return -1; } 
+  
+  int index = 0;
+
+  while ( current->value != value )
+  {
+    current = current -> next;
+    index++;
+    // on a pas trouvé l'element cherché
+    if ( current==NULL ) { return -1; } 
+  }
+
+  return index;
 }
 
 
@@ -199,6 +231,62 @@ find_first_element_with_value(list_elem_t * l, int value) {
     return res;
 }
 
+
+/*
+ * SYNOPSYS :
+ *   int remove_element(list_elem_t * * ppl, int value)
+ * DESCRIPTION :
+ *   Removes from the list the first element with a value equal to the argument value and 
+ *   frees the memory space reserved by this element.
+ *   Attention : Depending on the position, the head of the list may need to be modified
+ * PARAMETERS :
+ *   list_elem_t ** ppl : pointer to the pointer of the head of the list
+ *   int value  : value to be removed from the list
+ * RESULT :
+ *    0 in case of success
+ *   -1 in case of error
+ */
+ 
+int
+remove_element(list_elem_t * * ppl, int value) { 
+
+	list_elem_t * current = *ppl;
+	
+	//liste vide 
+	if (current == NULL) { return -1; }
+	
+	//le premier element doit etre supprimer
+	if (current -> value == value){
+  		list_elem_t * removing = current;
+  		current = current -> next;
+  		*ppl = current;
+  		free(removing);
+  		return 0;	
+  	}else{
+  	
+		list_elem_t * before = current;
+		current = current->next;
+
+		while(current != NULL){
+			if (current -> value == value){
+				
+				before -> next = current ->next ;
+				free(current);
+				
+				return 0;	
+			}
+			else{
+				before = current;
+				current = current->next;
+			}
+		}
+	}
+	
+	return -1;
+
+}
+
+
 /*
  * SYNOPSYS :
  *   int remove_element(list_elem_t * * ppl, int value)
@@ -247,6 +335,51 @@ remove_element(list_elem_t * * ppl, int value) {
     //            // break;
     //  }
 }
+/*
+ * SYNOPSYS :
+ *   int remove_element_2(list_elem_t * * ppl, int value)
+ * DESCRIPTION :
+ *   Removes from the list the first element with a value equal to the argument value and 
+ *   frees the memory space reserved by this element.
+ *   Attention : Depending on the position, the head of the list may need to be modified
+ * use an auxiliar function to find the index of theelement to remove
+ * PARAMETERS :
+ *   list_elem_t ** ppl : pointer to the pointer of the head of the list
+ *   int value  : value to be removed from the list
+ * RESULT :
+ *    0 in case of success
+ *   -1 in case of error
+ */
+int
+remove_element_2(list_elem_t * * ppl, int value) {
+  list_elem_t * before = *ppl;
+  if (before == NULL) { return -1; }
+
+  int indexremove = find_index_element(*ppl,value);
+  printf( "index : %d/n", indexremove);
+  if(indexremove==-1) {
+  	printf("l'élément n'est pas présent dans la liste");
+  	return -1;
+  }
+  else if (indexremove==0){
+  	list_elem_t * removing = before;
+  	before = before -> next;
+  	*ppl = before;
+  	free(removing);  	
+  	
+  }
+  else{
+  	for (int i = 0; i<indexremove-1; i++){
+  		before = before->next;	
+  	}
+  	list_elem_t * removing = before->next;
+  	before->next=removing->next;
+  	free(removing);
+  	
+  }
+  return 0;
+  
+}
 
 
 /*
@@ -262,8 +395,64 @@ remove_element(list_elem_t * * ppl, int value) {
  */
 void
 reverse_list(list_elem_t * * l) {
-  // .addTail()
+
+	list_elem_t * current = *l;
+	// la liste est vide et n'es pas composé d'un seul élément
+	if ((current != NULL) && (current->next != NULL)){
+	
+		// on considère que l'élement avant la tete sera NULL donc on l'initialise comme tel
+		list_elem_t * prev_elem = NULL;
+		
+		// on reserve la mémoire pour les éléments suivant le courant
+		list_elem_t * next_elem;
+	
+		while (current != NULL){
+		
+			// on affecte l'élément suivant
+			next_elem = current -> next ;
+			// on change le pointeur next du courant
+			current->next = prev_elem;
+			// on actualise l'élement précédent et courant
+			prev_elem = current;
+			current = next_elem;	
+		}
+		
+		*l = prev_elem;
+	}
 }
+
+
+
+/*
+ * SYNOPSYS :
+ *   void reverse_list_2(list_elem_t * * l)
+ * DESCRIPTION :
+ *   Modifies the list by inversing the order of the elements.
+ *   So the 1st element becomes the last element, the 2nd becomes the before last element, etc.)
+ *  this version use erase_list(2 list check)
+ * PARAMETRES :
+ *   list_elem_t ** l : pointer to the pointer of the head of the list
+ * RESULTAT :
+ *   aucun 
+ */
+ 
+void
+reverse_list_2(list_elem_t * * l) {
+	
+	list_elem_t * new_head = NULL;
+	list_elem_t * current = *l;
+	while(current != NULL){
+		insert_head(&new_head, current->value) ;
+		current = current -> next ;
+	}
+	erase_list(l);
+	*l = new_head;
+}
+
+
+
+
+
 
 /*
  * SYNOPSYS :
@@ -277,22 +466,21 @@ reverse_list(list_elem_t * * l) {
  */
 void
 erase_list(list_elem_t * * ppl) {
-    // if(l==NULL){ return -1; } 
-    list_elem_t * head = *ppl;
 
-    if ( head != NULL ) {
+	list_elem_t * current = *ppl;
 
-        list_elem_t * before = head;
-        list_elem_t * current = head->next;
+	if( current != NULL) {
+		list_elem_t * next_element =  current -> next;
+		while(current->next != NULL){
 
-        while (current->next != NULL) {
-          free(before);
-          before = current;
-          current = current->next;          
+			free(current);
+			current = next_element;
+			next_element = current->next;
+
       }
-      // free(before);
       free(current);
     }
+	*ppl = NULL;
+	
 
 }
-

@@ -112,28 +112,41 @@ main(int argc, char **argv)
 
 
 
-    case 's' :
-    case 'S' :
-      printf("value of the target to remove? ");
+    case 'V' :
+    case 'v' :
+      printf("index of the searched element ? ");
       scanf("%d",&value);
-      if ( remove_element(&head, value) == -1 ) {
-	      printf("Error : impossible to remove the element %d\n",value);
+      int index = find_index_element(head,value);
+      if ( index == -1) {
+	      printf("Error : impossible to find a element containing %d\n",value);
       }
       else {
-        printf(" The first element %d\n has been slain", value);
+        printf(" index of  %d is %d\n", value, index);
       }
       break;
 
 
+
+    case 's' :
+    case 'S' :
+            printf("Value of the element to remove ? ");
+      scanf("%d",&value);
+      if (remove_element(&head,value)!=0) {
+	      printf("Error : impossible to remove the element %d\n",value);
+      };
+
+
     case 'r' :
     case 'R' :
-      // TO BE COMPLETED
+	reverse_list(&head);
       break;
 
 
     case 'x' :
     case 'X' :
-     // TO BE COMPLETED
+      erase_list(&head);
+      print_list(head);
+      printf("list erased");
       return 0;
 
     default:
